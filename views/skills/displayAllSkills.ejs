@@ -1,0 +1,15 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Name</th><th>User IDs Associated with Skill</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/skills/?skill_id=<%= rs[i].skill_id %>"> <%= rs[i].name %></a></td>
+            <td><a href="/accounts/?user_id=<%=rs[i].skill_id %>"><%= rs[i].skill_id %></a></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No skills are entered into the skills database table.
+    <% } %>
+</div>

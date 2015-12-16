@@ -1,0 +1,15 @@
+<% if(rs.length > 0) { %>
+<h1>School Info</h1>
+Name: <%= rs[0].name %>
+<br />
+
+<h1>School Address</h1>
+<table border="1">
+    <tr><th>Address</th>
+    <td><%= rs[0].address%></td>
+    </tr>
+</table>
+
+<% } else { %>
+No school matched this school ID <%= school_id %>.
+<% } %>

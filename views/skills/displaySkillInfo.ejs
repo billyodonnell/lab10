@@ -1,0 +1,12 @@
+<% if(rs.length > 0) { %>
+
+<h1>Skill Info</h1>
+
+<table border="1">
+    <tr><th>Skill Name</th><th>Skill Description</th></tr>
+        <td><%= rs[0].name%></td><td><%= rs[0].description%></td>
+</table>
+
+<% } else { %>
+No skill matched this skill ID.
+<% } %>
